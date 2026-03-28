@@ -9,7 +9,7 @@
 
 ### 1. 登录 Cloudflare Pages
 
-访问：https://pages.cloudflare.com/
+访问：<https://pages.cloudflare.com/>
 
 如果没有 Cloudflare 账号，需要先注册（免费）。
 
@@ -28,13 +28,17 @@
 - **Production branch**: `main`
 - **Framework preset**: 选择 `None` 或 `VitePress`
 - **Build command**:
+
   ```
   npm run build
   ```
+
 - **Build output directory**:
+
   ```
   docs/.vitepress/dist
   ```
+
 - **Root directory**: 留空（使用根目录）
 - **Environment variables**: 不需要添加
 
@@ -102,6 +106,7 @@ Cloudflare Pages 自动提供：
 3. 查看 **Build logs**
 
 常见问题：
+
 - Node.js 版本不兼容：在项目设置中指定 Node 版本
 - 依赖安装失败：检查 `package.json`
 - 构建命令错误：确认构建命令正确
@@ -109,6 +114,7 @@ Cloudflare Pages 自动提供：
 ### 页面显示 404
 
 确保：
+
 - **Build output directory** 设置为 `docs/.vitepress/dist`
 - VitePress 构建成功生成了 `dist` 目录
 
