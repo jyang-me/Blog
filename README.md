@@ -1,114 +1,95 @@
-# 我的炫酷博客
+﻿# My Blog
 
-基于 VitePress 构建的个人博客，部署在 Cloudflare Pages。
+一个基于 VitePress 的个人博客项目，采用左侧导航与科技感主题设计，支持动态交互组件与 Cloudflare Pages 部署。
 
-## ✨ 特性
+## 项目特点
 
-- 🚀 基于 VitePress - 快速、轻量的静态网站生成器
-- 🎨 炫酷设计 - 渐变主题、平滑动画
-- 📱 响应式布局 - 完美适配各种设备
-- 🌙 深色模式 - 保护眼睛
-- 🔍 本地搜索 - 快速查找内容
-- ⚡ Cloudflare Pages - 极速访问
+- 基于 `VitePress 1.6.x` 构建，启动与构建速度快
+- 自定义主题样式，包含科技风视觉与交互动效
+- 首页包含动态渲染模块（实时状态、筛选面板等）
+- 内容组织清晰：学习、技术栈、工作、生活、博客
+- 支持本地搜索与静态站点部署
 
-## 🚀 快速开始
+## 技术栈
 
-### 安装依赖
+- `VitePress`
+- `Vue 3`
+- `Vite`
+- `Cloudflare Pages`
+
+## 快速开始
+
+### 1. 安装依赖
 
 ```bash
 npm install
 ```
 
-### 本地开发
+### 2. 本地开发
 
 ```bash
 npm run dev
 ```
 
-访问 `http://localhost:5173` 查看博客。
+默认访问地址：`http://localhost:5173`
 
-### 构建
+### 3. 构建生产版本
 
 ```bash
 npm run build
 ```
 
-构建产物将生成在 `docs/.vitepress/dist` 目录。
+构建产物目录：`docs/.vitepress/dist`
 
-### 预览
+### 4. 本地预览构建结果
 
 ```bash
 npm run preview
 ```
 
-## 📝 写作
+## 可用脚本
 
-在 `docs/blog/` 目录下创建 Markdown 文件即可开始写作。
+- `npm run dev`：启动本地开发环境
+- `npm run build`：构建静态站点
+- `npm run preview`：预览构建结果
 
-示例：
+## 目录结构
 
-```markdown
----
-title: 文章标题
-date: 2026-03-28
-categories:
-  - 技术
-tags:
-  - VitePress
----
-
-# 文章标题
-
-文章内容...
-```
-
-## 🎨 自定义
-
-- **配置**: 编辑 `docs/.vitepress/config.js`
-- **样式**: 修改 `docs/.vitepress/theme/custom.css`
-- **主题**: 编辑 `docs/.vitepress/theme/index.js`
-
-## 📦 部署到 Cloudflare Pages
-
-1. 将代码推送到 GitHub
-2. 登录 [Cloudflare Pages](https://pages.cloudflare.com/)
-3. 连接你的 GitHub 仓库
-4. 配置构建设置：
-   - **构建命令**: `npm run build`
-   - **输出目录**: `docs/.vitepress/dist`
-5. 点击部署
-
-## 📂 项目结构
-
-```
+```text
 my-blog/
-├── docs/
-│   ├── .vitepress/
-│   │   ├── config.js          # VitePress 配置
-│   │   └── theme/
-│   │       ├── index.js       # 主题入口
-│   │       └── custom.css     # 自定义样式
-│   ├── blog/                  # 博客文章
-│   │   ├── index.md
-│   │   ├── first-post.md
-│   │   └── vitepress-guide.md
-│   ├── index.md               # 首页
-│   └── about.md               # 关于页面
-├── package.json
-└── README.md
+├─ docs/
+│  ├─ .vitepress/
+│  │  ├─ config.js
+│  │  └─ theme/
+│  ├─ blog/
+│  ├─ index.md
+│  ├─ learning.md
+│  ├─ tech-stack.md
+│  ├─ work.md
+│  └─ life.md
+├─ DEPLOYMENT.md
+├─ package.json
+└─ README.md
 ```
 
-## 🛠️ 技术栈
+## 内容维护说明
 
-- [VitePress](https://vitepress.dev/) - 静态网站生成器
-- [Vue 3](https://vuejs.org/) - 渐进式 JavaScript 框架
-- [Vite](https://vitejs.dev/) - 新一代前端构建工具
-- [Cloudflare Pages](https://pages.cloudflare.com/) - 部署平台
+- 新增文章：在 `docs/blog/` 下创建 Markdown 文件
+- 修改导航：编辑 `docs/.vitepress/config.js`
+- 调整样式：编辑 `docs/.vitepress/theme/custom.css`
+- 扩展交互组件：编辑 `docs/.vitepress/theme/components/`
 
-## 📄 许可证
+## 部署
 
-MIT License
+推荐部署到 Cloudflare Pages，详见：
 
----
+- `DEPLOYMENT.md`
 
-**用心记录，用代码创造美好 ✨**
+核心配置如下：
+
+- Build command: `npm run build`
+- Build output directory: `docs/.vitepress/dist`
+
+## 许可证
+
+`ISC`
