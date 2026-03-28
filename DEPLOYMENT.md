@@ -58,7 +58,7 @@
 部署成功后，你会获得一个免费域名：
 
 ```
-https://my-blog.pages.dev
+https://my-blog-prk.pages.dev/
 ```
 
 或者你配置的自定义域名。
