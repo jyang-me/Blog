@@ -1,31 +1,31 @@
-import { defineConfig } from 'vitepress'
+﻿import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: '我的炫酷博客',
-  description: '基于 VitePress 的个人博客',
+  title: 'Bee Tech Blog',
+  description: '学习、技术栈、工作与生活的数字实验场',
   lang: 'zh-CN',
 
   themeConfig: {
-    logo: '/logo.svg',
-
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '博客', link: '/blog/' },
-      { text: '关于', link: '/about' },
-      {
-        text: '分类',
-        items: [
-          { text: '技术', link: '/categories/tech' },
-          { text: '生活', link: '/categories/life' },
-          { text: '随笔', link: '/categories/thoughts' }
-        ]
-      }
-    ],
+    nav: [],
 
     sidebar: {
+      '/': [
+        {
+          text: '导航',
+          items: [
+            { text: '首页', link: '/' },
+            { text: '学习', link: '/learning' },
+            { text: '技术栈', link: '/tech-stack' },
+            { text: '工作', link: '/work' },
+            { text: '生活', link: '/life' },
+            { text: '博客', link: '/blog/' },
+            { text: '关于', link: '/about' }
+          ]
+        }
+      ],
       '/blog/': [
         {
-          text: '最新文章',
+          text: '博客文章',
           items: [
             { text: '我的第一篇博客', link: '/blog/first-post' },
             { text: 'VitePress 使用指南', link: '/blog/vitepress-guide' }
@@ -39,8 +39,8 @@ export default defineConfig({
     ],
 
     footer: {
-      message: '基于 VitePress 构建',
-      copyright: 'Copyright © 2026-present'
+      message: 'Built with VitePress',
+      copyright: 'Copyright © 2026-present Bee'
     },
 
     search: {

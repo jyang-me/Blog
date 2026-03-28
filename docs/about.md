@@ -1,6 +1,6 @@
 # 关于我
 
-## 👋 你好！
+## 👋 你好
 
 欢迎来到我的博客！我是一名热爱技术的开发者。
 
@@ -19,9 +19,8 @@
 
 ## 📫 联系方式
 
-- **GitHub**: [github.com/yourusername](https://github.com/yourusername)
-- **Email**: your.email@example.com
-- **Twitter**: @yourusername
+- **GitHub**: [github.com/ljyang009-prog](https://github.com/ljyang009-prog)
+- **Email**: <ljyang009@gmail.com>
 
 ## 💬 博客说明
 

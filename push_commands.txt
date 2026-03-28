@@ -1,4 +1,0 @@
-# 推送到 GitHub 的命令（创建好仓库后执行）
-git remote add origin https://github.com/ljyang009-prog/my-blog.git
-git branch -M main
-git push -u origin main
