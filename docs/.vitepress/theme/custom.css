@@ -266,6 +266,74 @@ body,
   box-shadow: 0 0 0 5px rgba(15, 98, 254, 0.14);
 }
 
+.life-panel {
+  border: 1px solid var(--site-border);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--site-panel-2);
+}
+
+.life-panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.life-panel h3 {
+  margin: 0 0 8px;
+  color: #0f172a;
+}
+
+.life-score {
+  font-size: 0.82rem;
+  color: var(--vp-c-brand-1);
+  background: #eef4ff;
+  border: 1px solid #cbd8eb;
+  border-radius: 999px;
+  padding: 3px 10px;
+}
+
+.life-panel p {
+  margin: 0 0 10px;
+  color: var(--site-muted);
+}
+
+.life-progress {
+  height: 8px;
+  border-radius: 999px;
+  background: #e7eef8;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+
+.life-progress-fill {
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #0f62fe 0%, #3a86ff 100%);
+  transition: width 0.45s ease;
+}
+
+.life-panel ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.chip-icon {
+  margin-right: 4px;
+}
+
+.panel-fade-enter-active,
+.panel-fade-leave-active {
+  transition: opacity 0.22s ease, transform 0.22s ease;
+}
+
+.panel-fade-enter-from,
+.panel-fade-leave-to {
+  opacity: 0;
+  transform: translateY(6px);
+}
+
 .vp-doc img {
   border: 1px solid var(--site-border);
   border-radius: 12px;

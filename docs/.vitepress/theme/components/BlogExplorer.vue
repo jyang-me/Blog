@@ -48,13 +48,6 @@ const posts = [
     desc: '从搭建到部署的一套基础工作流。'
   },
   {
-    title: '工作流改造计划',
-    link: '/work',
-    date: '2026-03-28',
-    tag: '工作',
-    desc: '将交付流程拆解为可追踪节点。'
-  },
-  {
     title: '本周生活节奏记录',
     link: '/life',
     date: '2026-03-28',
@@ -63,7 +56,7 @@ const posts = [
   }
 ]
 
-const tags = ['全部', '学习', '技术', '工作', '生活']
+const tags = ['全部', '学习', '技术', '生活']
 
 const filteredPosts = computed(() => {
   if (currentTag.value === '全部') return posts

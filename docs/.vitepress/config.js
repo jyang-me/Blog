@@ -17,7 +17,6 @@ export default defineConfig({
             { text: '首页', link: '/' },
             { text: '学习', link: '/learning' },
             { text: '技术栈', link: '/tech-stack' },
-            { text: '工作', link: '/work' },
             { text: '生活', link: '/life' },
             { text: '简历', link: '/resume' },
             { text: '证书', link: '/resume#证书' },
