@@ -1,0 +1,241 @@
+/**
+ * 自定义样式 - 让博客更炫酷
+ */
+
+/* 品牌色定制 - 渐变紫色主题 */
+:root {
+  --vp-c-brand-1: #667eea;
+  --vp-c-brand-2: #764ba2;
+  --vp-c-brand-3: #667eea;
+  --vp-c-brand-soft: rgba(102, 126, 234, 0.14);
+
+  /* 渐变背景 */
+  --vp-home-hero-name-background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+  /* 自定义颜色 */
+  --custom-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* 深色模式 */
+.dark {
+  --vp-c-brand-1: #7c8aff;
+  --vp-c-brand-2: #8b5cf6;
+  --vp-c-brand-3: #7c8aff;
+  --vp-c-brand-soft: rgba(124, 138, 255, 0.16);
+}
+
+/* 首页英雄区域 */
+.VPHero .name {
+  background: var(--custom-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+/* 首页背景效果 */
+.VPHero {
+  position: relative;
+}
+
+.VPHero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(102, 126, 234, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 70% 50%, rgba(118, 75, 162, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 按钮渐变效果 */
+.VPButton.brand {
+  background: var(--custom-gradient);
+  border-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.VPButton.brand:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.3);
+}
+
+/* 特性卡片动画 */
+.VPFeature {
+  transition: all 0.3s ease;
+}
+
+.VPFeature:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+}
+
+.dark .VPFeature:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+}
+
+/* 链接渐变下划线 */
+.vp-doc a {
+  position: relative;
+  text-decoration: none;
+}
+
+.vp-doc a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: var(--custom-gradient);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.vp-doc a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* 代码块增强 */
+div[class*='language-'] {
+  border-radius: 8px;
+  margin: 16px 0;
+  transition: all 0.3s ease;
+}
+
+div[class*='language-']:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.dark div[class*='language-']:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* 自定义容器样式增强 */
+.custom-block {
+  border-left-width: 4px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.custom-block:hover {
+  transform: translateX(4px);
+}
+
+.custom-block.tip {
+  border-left-color: #667eea;
+}
+
+.custom-block.warning {
+  border-left-color: #f59e0b;
+}
+
+.custom-block.danger {
+  border-left-color: #ef4444;
+}
+
+/* 导航栏玻璃态效果 */
+.VPNav {
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.dark .VPNav {
+  background-color: rgba(26, 26, 26, 0.8);
+}
+
+/* 侧边栏滚动条美化 */
+.VPSidebar::-webkit-scrollbar {
+  width: 6px;
+}
+
+.VPSidebar::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.VPSidebar::-webkit-scrollbar-thumb {
+  background: var(--custom-gradient);
+  border-radius: 3px;
+}
+
+/* 文章标题渐变 */
+.vp-doc h1 {
+  background: var(--custom-gradient);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+}
+
+/* 标签样式 */
+.vp-doc p > code {
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1) 0%, rgba(118, 75, 162, 0.1) 100%);
+  border: 1px solid rgba(102, 126, 234, 0.2);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-weight: 500;
+}
+
+/* 表格美化 */
+.vp-doc table {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vp-doc th {
+  background: var(--custom-gradient);
+  color: white;
+}
+
+/* 页面加载动画 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.VPContent {
+  animation: fadeIn 0.5s ease;
+}
+
+/* 搜索框美化 */
+.VPNavBarSearch {
+  transition: all 0.3s ease;
+}
+
+.VPNavBarSearch:hover {
+  transform: scale(1.05);
+}
+
+/* 响应式优化 */
+@media (max-width: 768px) {
+  .VPHero .name {
+    font-size: 2rem;
+  }
+
+  .VPButton {
+    padding: 8px 20px;
+  }
+}
+
+/* 平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 选中文本颜色 */
+::selection {
+  background: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
