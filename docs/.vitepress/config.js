@@ -2,7 +2,7 @@
 
 export default defineConfig({
   title: 'Bee Tech Blog',
-  description: '学习、技术栈、工作与生活的数字实验场',
+  description: '聚焦技术文章与工程实践输出',
   lang: 'zh-CN',
 
   themeConfig: {
@@ -17,9 +17,6 @@ export default defineConfig({
             { text: '首页', link: '/' },
             { text: '学习', link: '/learning' },
             { text: '技术栈', link: '/tech-stack' },
-            { text: '生活', link: '/life' },
-            { text: '简历', link: '/resume' },
-            { text: '证书', link: '/resume#证书' },
             { text: '博客', link: '/blog/' },
             { text: '关于', link: '/about' }
           ]

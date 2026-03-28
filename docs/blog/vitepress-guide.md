@@ -176,7 +176,7 @@ export default {
         text: '分类',
         items: [
           { text: '技术', link: '/tech' },
-          { text: '生活', link: '/life' }
+          { text: '技术专题', link: '/blog/' }
         ]
       }
     ]

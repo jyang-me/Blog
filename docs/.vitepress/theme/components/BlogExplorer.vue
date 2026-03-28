@@ -46,17 +46,10 @@ const posts = [
     date: '2026-03-28',
     tag: '技术',
     desc: '从搭建到部署的一套基础工作流。'
-  },
-  {
-    title: '本周生活节奏记录',
-    link: '/life',
-    date: '2026-03-28',
-    tag: '生活',
-    desc: '保持体能、输入与专注输出的平衡。'
   }
 ]
 
-const tags = ['全部', '学习', '技术', '生活']
+const tags = ['全部', '学习', '技术']
 
 const filteredPosts = computed(() => {
   if (currentTag.value === '全部') return posts
