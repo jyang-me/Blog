@@ -7,7 +7,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: [],
-    appearance: false,
+    appearance: true,
 
     sidebar: {
       '/': [
