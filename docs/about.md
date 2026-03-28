@@ -15,7 +15,6 @@
 
 - GitHub: [github.com/ljyang009-prog](https://github.com/ljyang009-prog)
 - Email: [ljyang009@gmail.com](mailto:ljyang009@gmail.com)
-- 电话: [+86 13874537340](tel:+8613874537340)
 
 ## 博客说明
 
