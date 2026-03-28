@@ -1,33 +1,28 @@
-# 关于我
+﻿# 关于我
 
-## 👋 你好
+你好，欢迎来到我的博客。
 
-欢迎来到我的博客！我是一名热爱技术的开发者。
+我目前聚焦于嵌入式软件与前端工程实践，习惯通过项目驱动学习，持续把学习、工作与生活沉淀为可复用的方法。
 
-## 💻 技术栈
+## 技术方向
 
-- **前端**: Vue.js, React, TypeScript
-- **后端**: Node.js, Python
-- **工具**: Git, Docker, VS Code
+- 嵌入式软件开发
+- Web 前端工程（Vue / VitePress / TypeScript）
+- 自动化工具与部署实践
 
-## 🎯 兴趣爱好
+## 联系方式
 
-- 📚 阅读技术书籍
-- 🎮 游戏开发
-- 🎨 UI/UX 设计
-- ✈️ 旅行摄影
+- GitHub: [github.com/ljyang009-prog](https://github.com/ljyang009-prog)
+- Email: [ljyang009@gmail.com](mailto:ljyang009@gmail.com)
+- 电话: [+86 13874537340](tel:+8613874537340)
 
-## 📫 联系方式
+## 博客说明
 
-- **GitHub**: [github.com/ljyang009-prog](https://github.com/ljyang009-prog)
-- **Email**: <ljyang009@gmail.com>
+本站基于 VitePress 构建，部署在 Cloudflare Pages。
 
-## 💬 博客说明
-
-这个博客使用 VitePress 搭建，部署在 Cloudflare Pages 上。所有文章内容使用 Markdown 编写，源代码托管在 GitHub。
-
-欢迎与我交流技术问题和想法！
+你可以在这里看到我的学习路径、技术栈、工作记录与生活总结。
 
 ---
 
-*最后更新：2026-03-28*
+最后更新：2026-03-28
+

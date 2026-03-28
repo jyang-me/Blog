@@ -7,6 +7,7 @@ export default defineConfig({
 
   themeConfig: {
     nav: [],
+    appearance: false,
 
     sidebar: {
       '/': [
@@ -18,6 +19,8 @@ export default defineConfig({
             { text: '技术栈', link: '/tech-stack' },
             { text: '工作', link: '/work' },
             { text: '生活', link: '/life' },
+            { text: '简历', link: '/resume' },
+            { text: '证书', link: '/resume#证书' },
             { text: '博客', link: '/blog/' },
             { text: '关于', link: '/about' }
           ]
