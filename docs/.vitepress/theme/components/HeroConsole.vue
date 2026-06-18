@@ -35,6 +35,7 @@ let p = 0
 let i = 0
 let deleting = false
 let timer
+const prefersReducedMotion = typeof window !== 'undefined' && window.matchMedia('(prefers-reduced-motion: reduce)').matches
 
 const metrics = [
   { label: 'Weekly Logs', value: '05' },
@@ -65,7 +66,11 @@ const tick = () => {
 }
 
 onMounted(() => {
-  tick()
+  if (prefersReducedMotion) {
+    typed.value = phrases[0]
+  } else {
+    tick()
+  }
 })
 
 onUnmounted(() => {

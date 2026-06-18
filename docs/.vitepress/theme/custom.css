@@ -46,7 +46,12 @@ body,
   background-size: 36px 36px;
   mask-image: radial-gradient(circle at center, black 40%, transparent 92%);
   opacity: 0.32;
-  animation: gridShift 28s linear infinite;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Layout::before {
+    animation: gridShift 28s linear infinite;
+  }
 }
 
 .Layout::after {
@@ -59,7 +64,12 @@ body,
     radial-gradient(circle at 20% 35%, var(--site-glow-a) 0%, transparent 35%),
     radial-gradient(circle at 78% 62%, var(--site-glow-b) 0%, transparent 38%);
   filter: blur(8px);
-  animation: glowFloat 16s ease-in-out infinite alternate;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .Layout::after {
+    animation: glowFloat 16s ease-in-out infinite alternate;
+  }
 }
 
 .VPNav {
@@ -151,8 +161,10 @@ body,
   color: var(--site-muted);
 }
 
-.cursor {
-  animation: blink 1s steps(1, end) infinite;
+@media (prefers-reduced-motion: no-preference) {
+  .cursor {
+    animation: blink 1s steps(1, end) infinite;
+  }
 }
 
 @keyframes blink {
@@ -173,7 +185,18 @@ body,
   text-decoration: none;
   color: #0f172a;
   background: #f7fbff;
-  transition: all 0.2s ease;
+  transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.hero-btn:focus-visible {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
+}
+
+.hero-btn:hover {
+  background: #eef4ff;
+  border-color: #a0bce6;
+  box-shadow: 0 2px 8px rgba(15, 98, 254, 0.12);
 }
 
 .hero-btn.primary {
@@ -182,7 +205,17 @@ body,
   color: #fff;
 }
 
-.hero-btn:hover,
+.hero-btn.primary:focus-visible {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
+}
+
+.hero-btn.primary:hover {
+  background: #0954e0;
+  border-color: #0954e0;
+  box-shadow: 0 4px 12px rgba(15, 98, 254, 0.3);
+}
+
 .metric:hover,
 .dash-card:hover,
 .neo-card:hover,
@@ -219,7 +252,17 @@ body,
 .timeline-node {
   border-radius: 12px;
   padding: 14px;
-  transition: all 0.2s ease;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.metric:focus-visible,
+.dash-card:focus-visible,
+.neo-card:focus-visible,
+.stack-item:focus-visible,
+.timeline-node:focus-visible {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
 }
 
 .metric strong,
@@ -241,11 +284,20 @@ body,
 .chip {
   border: 1px solid #cbd8eb;
   border-radius: 999px;
-  padding: 6px 12px;
+  padding: 10px 18px;
+  min-height: 44px;
   background: #f4f8ff;
   color: #1f2937;
   cursor: pointer;
-  transition: all 0.2s ease;
+  font-size: 0.925rem;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+}
+
+.chip:focus-visible {
+  outline: 2px solid #0f62fe;
+  outline-offset: 2px;
 }
 
 .chip:hover,
@@ -395,15 +447,39 @@ body,
   border-color: rgba(148, 163, 184, 0.35);
 }
 
+.dark .hero-btn:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.dark .hero-btn:hover {
+  background: rgba(30, 41, 59, 0.85);
+  border-color: rgba(148, 163, 184, 0.55);
+}
+
 .dark .hero-btn.primary {
   background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 100%);
   border-color: #2563eb;
+}
+
+.dark .hero-btn.primary:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
+}
+
+.dark .hero-btn.primary:hover {
+  background: linear-gradient(90deg, #1e40af 0%, #1d4ed8 100%);
 }
 
 .dark .chip {
   background: rgba(15, 23, 42, 0.72);
   color: #e2e8f0;
   border-color: rgba(148, 163, 184, 0.35);
+}
+
+.dark .chip:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
 }
 
 .dark .chip:hover,
@@ -415,4 +491,14 @@ body,
 .dark .track-bar,
 .dark .stack-track {
   background: rgba(30, 41, 59, 0.9);
+}
+
+/* Dark mode focus states for cards */
+.dark .metric:focus-visible,
+.dark .dash-card:focus-visible,
+.dark .neo-card:focus-visible,
+.dark .stack-item:focus-visible,
+.dark .timeline-node:focus-visible {
+  outline: 2px solid #60a5fa;
+  outline-offset: 2px;
 }
