@@ -1,37 +1,54 @@
-﻿import { defineConfig } from 'vitepress'
+import { defineConfig } from 'vitepress'
 
 export default defineConfig({
-  title: 'Bee Tech Blog',
-  description: '聚焦技术文章与工程实践输出',
+  title: '技术文档',
+  description: 'AI、Frontend、Backend、Embedded 技术文章与学习笔记',
   lang: 'zh-CN',
 
   themeConfig: {
     nav: [],
     appearance: true,
 
-    sidebar: {
-      '/': [
-        {
-          text: '导航',
-          items: [
-            { text: '首页', link: '/' },
-            { text: '学习', link: '/learning' },
-            { text: '技术栈', link: '/tech-stack' },
-            { text: '博客', link: '/blog/' },
-            { text: '关于', link: '/about' }
-          ]
-        }
-      ],
-      '/blog/': [
-        {
-          text: '博客文章',
-          items: [
-            { text: '我的第一篇博客', link: '/blog/first-post' },
-            { text: 'VitePress 使用指南', link: '/blog/vitepress-guide' }
-          ]
-        }
-      ]
-    },
+    sidebar: [
+      {
+        text: 'AI',
+        collapsed: false,
+        items: [
+          { text: '文章索引', link: '/ai/' }
+        ]
+      },
+      {
+        text: '前端',
+        collapsed: false,
+        items: [
+          { text: '文章索引', link: '/frontend/' },
+          { text: 'VitePress 使用指南', link: '/frontend/vitepress-guide' }
+        ]
+      },
+      {
+        text: '后端',
+        collapsed: false,
+        items: [
+          { text: '文章索引', link: '/backend/' }
+        ]
+      },
+      {
+        text: '嵌入式',
+        collapsed: false,
+        items: [
+          { text: '文章索引', link: '/embedded/' }
+        ]
+      },
+      {
+        text: '页面',
+        items: [
+          { text: '首页', link: '/' },
+          { text: '学习', link: '/learning' },
+          { text: '技术栈', link: '/tech-stack' },
+          { text: '关于', link: '/about' }
+        ]
+      }
+    ],
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/jyang-me' }
